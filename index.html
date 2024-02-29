@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8"> <!-- ქართულად რო წაიკითხოს -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- აზრზე არ ვარ-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- აზრზე არ ვარ -->
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
+        integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" /> <!-- Font Awsome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css"
+        integrity="sha512-SbiR/eusphKoMVVXysTKG/7VseWii+Y3FdHrt0EpKgpToZeemhqHeZeLWLhJutz/2ut2Vw1uQEj2MbRF+TVBUA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" /> <!-- Bootstrap-->
+    <link rel="stylesheet" href="main.css"> <!-- CSS რო წაიკითხოს -->
+    <link rel="stylesheet" href="Fonts/3d_unicode.ttf"> <!-- ფონტები-->
+    <link rel="icon" type="image/x-icon" href="Images/murtaz.jpg"> <!-- Favicon-->
+    <title>მურთაზი</title>
+
+
+
+</head>
+
+
+
+
+
+<body>
+
+    <div class="h1">
+        <h1>   <b>მოგესლამებით! </b> <br> <br>  გთხოვთ გაიაროთ ავტორიზაცია მურთაზთან სალაპარაკოდ</h1>
+    </div>
+
+    <div class="h2">
+        <h1><br> გთხოვთ გაიაროთ ავტორიზაცია ახლიდან</h1>
+    </div>
+
+    <div id="ukandabrunebuli" class="ukandabrunebuli">მიდი ჩემო ძმაო აბა რა შეგეშალა, შეასწორე და წამო ისევ</div>
+
+
+
+    <div class="container mt-5">
+        <form id="reg">
+            <input id="name" class="form-control mb-3" type="text" placeholder="სახელი">
+            <input id="lname" class="form-control mb-3" type="text" placeholder="გვარი">
+            <input id="birthyear" class="form-control mb-3" type="number" placeholder="დაბადების წელი">
+            <input id="number" class="form-control mb-3" type="number" placeholder="ტელეფონის ნომერი">
+            <label for=""> აირჩიეთ სქესი :</label>
+            <div class="form-check">
+               
+                <input class="form-check-input" type="radio" name="sqesi" id="girl" checked>
+                <label class="form-check-label" for="girl">
+                    ქალი
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="sqesi" id="boy">
+                <label class="form-check-label" for="boy">
+                    კაცი
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="sqesi" id="other" onclick="showInput()">
+                <label class="form-check-label" for="other">
+                    ჩამოთვლილთაგან არცერთი
+                </label>
+                <input id="otherInput" class="form-control mb-3 hidden-input" type="text" placeholder="შეიყვანეთ სხვა სქესი">
+            </div>
+        
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="sqesi" id="argtqvit" checked>
+                <label class="form-check-label" for="argtqvit">
+                    არგეტყვით
+                </label>
+            </div>
+        
+            <button id="send" type="button" class="btn btn-outline-success mt-3">გაგზავნა</button>
+        </form>
+
+        <script>
+            function showInput() {
+                var otherInput = document.getElementById('otherInput');
+                otherInput.style.display = document.getElementById('other').checked ? 'block' : 'none';
+            }
+        </script>
+        
+
+       
+
+
+        <div id="chat" style="display: none;">
+            <img src="Images/murtaz.jpg" alt="Avatar" class="avatar">
+
+            <p class="p"></p>
+            <input type="text" class="form-control">
+            <button id="gagzavna" class="btn btn-success ">გაგზავნა</button>
+
+
+        </div>
+
+
+        <!-- თანთალა კაცის ვიდეო -->
+        <div class="center">
+            <iframe id="music" width="560" height="315" src="https://www.youtube.com/embed/palGLF3_lzQ"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+            <!-- თანთალა კაცის ვიდეო -->
+
+            <div class="wikipedia d-none btn btn-danger" id="wikipedia"> <a
+                    href="https://www.wikipedia.org/">Wikipedia</a></div>
+        </div>
+
+
+
+        <div id="youtube" class="btn"> <a href="https://www.youtube.com/"> იუთუბში შესვლა</a> </div>
+
+
+
+
+
+
+
+
+        <script src="https://apis.google.com/js/platform.js" async defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+        <script src='type.min.js'></script>
+        <script src='main.js'></script>
+
+
+</body>
+
+<!-- codeshare.io/step2022 -->
+<!-- iarumas.netlify.app -->
+
+</html>
